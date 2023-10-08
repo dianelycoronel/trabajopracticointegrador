@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: grey;
+  height: 4.2em;
+  color: var(--textcolor);
+  text-align: left;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+  .logo {
+    display: inline-block;
+    margin-left: 2em;
+
+    & img {
+      height: 4em;
+      vertical-align: middle;
+    }
+
+    & h1 {
+      display: inline-block;
+      color: white;
+    }
+
+  }
+
+  & .navbar {
+    float: right;
+    padding: 1.5em 2em;
+
+    .nav-item {
+      text-decoration: none;
+      color: w;
+      margin: 1.5em .5em;
+    }
+
+    .nav-item .ticket {
+      color: limegreen
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+    margin: 0 .5em;
+  }
+
+  .ticket {
+    color: limegreen;
+  }
+}
+
+main {
+  .principal {
+    position: relative;
+
+    & img {
+      filter: brightness(0.5);
+      width: 100%;
+    }
+
+    .content-principal {
+
+      & p {
+        margin: 1.5em 0;
+      }
+
+      & a {
+        border: 1px solid white;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        padding: 15px 20px;
+        margin: 0 1em;
+      }
+
+      .btn-color {
+        background-color: limegreen;
+        border: 1px solid limegreen;
+      }
+    }
+  }
+}
+
+.grid-content {
+  display: grid;
+  grid-template-areas: 'orador orador'
+    'paisaje descrip'
+    'formulario formulario';
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+
+  & div [class^='item'] {
+    border: 2px solid purple;
+  }
+
+  .item-1 {
+    grid-area: orador;
+
+    .content-card {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+
+      & div[class^='card'] {
+        width: 250px;
+        border: 0.5px solid #d8d8d8;
+
+        & a {
+          margin-top: 30px;
+          margin-left: 10px;
+          background-color: burlywood;
+          border: 0.5px solid #d8d8d8;
+        }
+
+        & p {
+          padding: 10px;
+        }
+
+        & img {
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+
+  .item-2 {
+    grid-area: paisaje;
+    margin-top: 20px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .item-3 {
+    margin-top: 20px;
+    grid-area: descrip;
+    background-color: grey;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+
+  }
+
+  .item-4 {
+    grid-area: formulario;
+    padding: 20px;
+    text-align: center;
+
+    & input {
+      width: 60%;
+      margin-top: 5px;
+      padding: 10px;
+    }
+
+    & textarea {
+      width: 60%;
+      margin-top: 5px;
+      padding: 10px;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 1%;
+}
+
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 4px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media screen and (min-width: 1080px) {
+  main {
+    .content-principal {
+      width: 40%;
+      position: absolute;
+      top: 50%;
+      color: white;
+      text-align: right;
+      right: 4em;
+      line-height: 1.5em;
+    }
+  }
+}
+
+@media(max-width:1080px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    gap: 0;
+    flex-direction: column;
+    background-color: grey;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    width: 100%;
+  }
+
+  main {
+    .content-principal {
+      width: 100%;
+      position: absolute;
+      top: 30%;
+      color: white;
+      text-align: center;
+      line-height: 1.5em;
+    }
+  }
+}
+
+footer {
+  background-color: rgb(31, 82, 136);
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+
+  & li {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    & a {
+      text-decoration: none;
+      color: white;
+      margin: 0 .5em;
+    }
+  }
+}

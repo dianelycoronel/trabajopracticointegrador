@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T.P.Integrador</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/img/codoacodo.png" alt="" />
+        <h1>Conf BS As</h1>
+      </div>
+      <nav class="navbar">
+        <div class="nav-menu">
+          <a class="nav-item" href="#">La conferencia</a>
+          <a class="nav-item" href="#oradores">Los oradores</a>
+          <a class="nav-item" href="#lugar">El lugar y la fecha</a>
+          <a class="nav-item" href="#conviertete">Convierte en orador</a>
+          <a class="ticket" href="./pages/ticket.html">Comprar tickets</a>
+        </div>
+  
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="principal">
+        <img
+          src="assets/img/ba1.jpg"
+          alt="Imagen Palacios de las Aguas de Buenos Aires"
+        />
+        <div class="content-principal">
+          <h2>Conf Bs As</h2>
+          <p>
+            Bs As llega por primera vez a Argentina. Un evento para compartir
+            con nuestra comunidad el conocimiento y experiencia de los expertos
+            que están creando el futuro de Internet. Ven a conocer a miembros
+            del evento, a otros estudiantes de Codo a Codo y los oradores de
+            primer nivel que tenemos para ti. Te esperamos
+          </p>
+          <a href="#conviertete">Quiero ser orador</a>
+          <a class="btn-color" href="pages/ticket.html">comprar tickets</a>
+        </div>
+      </section>
+    </main>
+    <div class="grid-content">
+      <div class="item-1">
+        <div class="title">
+          <h4>CONOCE A LOS</h4>
+          <h2>ORADORES</h2>
+        </div>
+        <div class="content-card">
+          <div class="card-1">
+            <img src="assets/img/steve.jpg" alt="" />
+            <a href="">JavaScript</a>
+            <a href="">React</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+              voluptatibus perferendis deleniti, totam fuga sequi iste! Facilis
+              explicabo repellat ut similique incidunt? Ullam nobis beatae,
+              corporis facilis veniam magni ratione!
+            </p>
+          </div>
+          <div class="card-2">
+            <img src="assets/img/bill.jpg" alt="" />
+            <a href="">JavaScript</a>
+            <a href="">React</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+              voluptatibus perferendis deleniti, totam fuga sequi iste! Facilis
+              explicabo repellat ut similique incidunt? Ullam nobis beatae,
+              corporis facilis veniam magni ratione!
+            </p>
+          </div>
+          <div class="card-3">
+            <img src="assets/img/ada.jpeg" alt="" />
+            <a href="">JavaScript</a>
+            <a href="">React</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+              voluptatibus perferendis deleniti, totam fuga sequi iste! Facilis
+              explicabo repellat ut similique incidunt? Ullam nobis beatae,
+              corporis facilis veniam magni ratione!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item-2">
+        <img src="assets/img/honolulu.jpg" alt="" />
+      </div>
+      <div class="item-3">
+        <h2>Conf Bs As</h2>
+        <p>
+          Bs As llega por primera vez a Argentina. Un evento para compartir con
+          nuestra comunidad el conocimiento y experiencia de los expertos que
+          están creando el futuro de Internet. Ven a conocer a miembros del
+          evento, a otros estudiantes de Codo a Codo y los oradores de primer
+          nivel que tenemos para ti. Te esperamos
+        </p>
+        <a href="#conviertete">Quiero ser orador</a>
+      </div>
+      <div class="item-4">
+        <form action="">
+          <input type="text" placeholder="Nombre" />
+          <input type="text" placeholder="Apellido" />
+          <textarea
+            name=""
+            placeholder="¿Sobre que quieres hablar?"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Conferencias</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Estudiantes</a></li>
+      </ul>
+    </footer>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+  
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        console.log("paso por active")
+      })
+  
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active")
+        navMenu.classList.remove("active")
+        console.log("paso por remove active")
+      }))
+    </script>
+  </body>
+</html>
