@@ -5,6 +5,38 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.tarjeta{
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.btn-color-limegreen{
+  background-color:rgb(0, 252, 130);
+  border-radius: 3%;
+  border: 0;
+  height: 40px;
+  color: white;
+}
+
+.row{
+  margin-bottom: 15px;
+}
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+  padding: 10px;
+}
+
+.cards-wrapper{
+  column-gap: 15px;
+}
+
+.container{
+  text-align: center;
+}
+
 header {
   background-color: grey;
   height: 4.2em;
@@ -58,6 +90,7 @@ header {
 }
 
 main {
+  margin-top: 70px;
   .principal {
     position: relative;
 
@@ -272,4 +305,6 @@ footer {
       margin: 0 .5em;
     }
   }
+  
+  
 }
